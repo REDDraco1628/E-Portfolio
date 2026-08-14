@@ -53,6 +53,11 @@ nav {
     font-weight: 700;
 }
 
+.nav__link--anchor:hover {
+    color: #ff4d4d;
+    transition: all 0.35s ease-in-out;
+}
+
 .nav__link--anchor-primary {
     background-color: red;
     color: white;
