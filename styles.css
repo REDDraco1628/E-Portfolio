@@ -19,7 +19,7 @@ h1, h2, h3, h4, h5, h6, span {
 p {
     line-height: 1.5;
     font-size: 16px;
-
+    text-align: center;
 }
 
 li {
@@ -52,6 +52,18 @@ nav {
 .nav__link--anchor-primary {
     background-color: red;
     color: white;
-    padding: 8px 16px;
+    padding: 8px 20px;
     border-radius: 25px;
+    transition: all 0.35s ease-in-out;
+}
+
+.nav__link--anchor-primary:hover {
+    background-color: #ff4d4d;
+}
+
+.personal__logo {
+    font-size: 24px;
+    color: #ff4d4d;
+    margin: 0 12px;
+    font-weight: 700;
 }
