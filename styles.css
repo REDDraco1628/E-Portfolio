@@ -123,8 +123,27 @@ nav {
 }
 
 .about-me__picture--mask {
-    max-width: 300px;
-    max-height: 300px;
-    overflow: hidden;
+    left: 298px;
+    width: 150px;
+    height: 150px;
     border-radius: 50%;
+    overflow: hidden;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    margin-bottom: 28px;
+}
+
+.about-me__picture {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    top: -0.5px;
+}
+
+.about-me__info--title {
+    margin-bottom: 15px;
+}
+
+.about-me__info--para {
+    font-size: 20px;
+    margin-bottom: 28px;
 }
