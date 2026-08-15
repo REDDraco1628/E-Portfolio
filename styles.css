@@ -26,6 +26,13 @@ p {
 
 }
 
+.name {
+    color: red;
+    font-size: 16px;
+    font-weight: 500;
+    top: -0.5px
+}
+
 li {
     list-style-type: none;
 }
