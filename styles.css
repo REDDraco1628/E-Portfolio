@@ -49,6 +49,15 @@ p {
     top: -0.05px;
 }
 
+section:nth-child(even) {
+    background-color: #f8f8f8;
+}
+
+.container {
+    padding: 50px 0;
+    margin-bottom: 20px;
+}
+
 li {
     list-style-type: none;
 }
@@ -114,6 +123,11 @@ nav {
     flex-direction: column;
 }
 
+.about-me__info {
+    display: flex;
+    flex-direction: column;
+}
+
 
 .about__me__info--container {
     display: flex;
@@ -158,4 +172,37 @@ nav {
     text-decoration: none;
     padding: 0 16px;
     left: 398px;
+}
+
+.about-me__img--container {
+    flex: 1;
+    display: flex;
+    align-items: center;
+}
+
+.about-me__img {
+    align-items: center;
+    width: 100%;
+    max-width: 700px;
+    max-height: 475px;
+    left: 598px;
+}
+
+*/ languages  */
+
+
+
+.language__img {
+    max-width: 500px;
+    max-height: 500px;
+    align-items: center;
+}
+
+.language__img {
+    width: 100%;
+    max-width: 100px;
+}
+
+.language_img--wrapper {
+    width: 25%;
 }
