@@ -121,3 +121,10 @@ nav {
     justify-content: column;
     align-items: center;
 }
+
+.about-me__picture--mask {
+    max-width: 300px;
+    max-height: 300px;
+    overflow: hidden;
+    border-radius: 50%;
+}
