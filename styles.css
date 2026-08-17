@@ -340,8 +340,14 @@ nav {
     color: #fff;
 }
 
-*/ last peice */
-.logo-img {
-    border-radius: 20px;
-    
+*/ footer */
+
+.footer {
+    background-color: #242424;
+}
+
+.footer__logo--img {
+    width: 70px;
+    height: 70px;
+    border-radius: 35px;
 }
