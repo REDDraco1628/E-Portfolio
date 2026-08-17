@@ -253,6 +253,10 @@ nav {
 
 */ projects */
 
+.projects {
+    margin-bottom: 40px;
+}
+
 .project {
     margin-bottom: 135px;
 }
@@ -335,3 +339,6 @@ nav {
     text-align: left;
     color: #fff;
 }
+
+*/ contact footer */
+
