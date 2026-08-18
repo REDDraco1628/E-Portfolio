@@ -12,6 +12,7 @@
 
 html {
     scroll-behavior: smooth;
+    overflow-x: hidden;
 }
 
 h1, h2, h3, h4, h5, h6, span {
@@ -31,6 +32,15 @@ p {
 a {
     text-decoration: none;
     position: relative;
+    transition: opacity 300ms ease;
+}
+
+a:hover {
+    opacity: 0.7;
+}
+
+.i:hover {
+    opacity: 0.7;
 }
 
 .link__hover-effect:after {
@@ -87,6 +97,7 @@ li {
 }
 
 .row {
+    padding: 0 12px;
     width: 100%;
     max-width: 800px;
     margin: 0 auto;
@@ -99,8 +110,10 @@ nav {
     width: 100%;
     max-width: 1000px;
     margin: 0 auto;
+    padding: 0 12px;
     display: flex;
     justify-content: space-between;
+    animation: animate-profile-picture 450ms 375ms backwards;
 }
 
 .nav__link--list {
@@ -171,6 +184,19 @@ nav {
     overflow: hidden;
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
     margin-bottom: 28px;
+    animation: animate-profile-picture 800ms 200ms backwards;
+}
+
+@keyframes animate-profile-picture {
+    0% {
+        transform: scale(0);
+    }
+    80% {
+        transform: (1.1);
+    }
+    100% {
+        transform: (1);
+    }
 }
 
 .about-me__picture {
@@ -182,12 +208,14 @@ nav {
 
 .about-me__info--title {
     margin-bottom: 15px;
+    animation: fade-down 450ms 450ms backwards;
 }
 
 .about-me__info--para {
     font-size: 20px;
     top: 10px;
     margin-bottom: 28px;
+    animation: fade-down 450ms 450ms backwards;
 }
 
 .about-me__links {
@@ -197,6 +225,18 @@ nav {
     text-decoration: none;
     padding: 0 16px;
     left: 398px;
+    animation: fade-down 450ms 450ms backwards;
+}
+
+@keyframes fade-down {
+    0% {
+        opacity: 0;
+        transform: translateY(-40px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0); 
+    }
 }
 
 .about-me__img--container {
@@ -205,12 +245,22 @@ nav {
     align-items: center;
 }
 
+@keyframes fade-in {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
 .about-me__img {
     align-items: center;
     width: 100%;
     max-width: 700px;
     max-height: 475px;
     left: 598px;
+    animation: fade-in 1200ms 675ms backwards;
 }
 
 */ languages  */
@@ -230,8 +280,6 @@ nav {
 .language__img {
     max-width: 500px;
     max-height: 500px;
-    align-items: center;
-    left: 760px;
     transition: all 300ms ease;
 }
 
@@ -256,17 +304,21 @@ nav {
 
 .language__list {
     display: flex;
+    justify-content: center;
     width: 100%;
     margin-bottom: 20px;
 }
 
 .language__name {
     position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     bottom: 0;
     transform: scale(0);
     transition: all 300ms ease; 
-    left: 784px;
     top: 125px;
+    right: 23px;
     color: red;
     font-size: 20px;
     font-weight: 500;
@@ -436,4 +488,65 @@ footer {
     opacity: 1;
     transform: translateX(60px);
     transition: all 450ms ease-in-out;
+}
+
+/* Small phones, tablets, large smartphones */
+
+@media(max-width: 798px) {
+    nav {
+        height: 68px;
+    }
+
+    h1 {
+        font-size: 28px;
+    }
+
+    .about-me__info--para {
+        font-size: 18px;
+    }
+
+    .language {
+        width: calc(100%/ 2);
+    }
+
+    .project__description--para {
+        font-size: 14px; 
+    }
+
+    .project__description {
+        left: 30px;
+        padding-right: 30px;
+    }
+}
+
+@media (max-width: 480) {
+    .nav__link:not(:last-child) {
+        display: none;
+    }
+    
+    .project__description {
+        padding: 0;
+        left: 0;
+        width: 100%;
+    }
+
+    .project__description--para {
+        display: none;
+    }
+
+    .project__description--link {
+        display: flex;
+        justify-content: center;
+    }
+
+    .project__description--title {
+        font-size: 32px;
+        line-height: 1;
+        text-align: center;
+    }
+    
+    .project__descriptoin--sub-title {
+        text-align: center;
+        margin: 12px 0;
+    }
 }
